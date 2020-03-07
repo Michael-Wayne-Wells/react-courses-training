@@ -8,8 +8,8 @@ export function createCourseSuccess(course) {
   return { type: types.CREATE_COURSE_SUCCESS, course };
 }
 
-export function updateCoursesSuccess(courses) {
-  return { type: types.UPDATE_COURSE_SUCCESS, courses };
+export function updateCoursesSuccess(course) {
+  return { type: types.UPDATE_COURSE_SUCCESS, course };
 }
 
 export function loadCourses() {
@@ -26,6 +26,7 @@ export function loadCourses() {
 }
 
 export function saveCourse(course) {
+  //eslint-disable-next-line no-unused-vars
   return function(dispatch, getState) {
     return courseApi
       .saveCourse(course)
